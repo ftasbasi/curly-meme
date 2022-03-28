@@ -87,6 +87,7 @@ def getIssues(startAt, data):
 
 
 count = 0
+limit=100 #go until 100*100 issue
 while count < limit:
     getIssues(count, data)
     count += 1
