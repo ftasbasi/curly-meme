@@ -13,14 +13,6 @@ headers = {
     "Content-Type": "application/json"
 }
 
-
-def create_boto3_session(region):
-    session = boto3.Session(
-        region_name=region
-    )
-    return session
-
-
 def insert_jira(issue_type, issue_number, issue_link, assignee, status, project, summary, description, timestamp):
     sql = "insert into table1 (issue_type, issue_number, issue_link, assignee, status, project, summary, description," \
           "timestamp) values (%s, %s, %s,%s, %s, %s,%s, %s, %s) returning id"
